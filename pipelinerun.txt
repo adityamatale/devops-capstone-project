@@ -1,0 +1,54 @@
+[clone : clone] + '[' false '=' true ]
+[clone : clone] + '[' false '=' true ]
+[clone : clone] + '[' false '=' true ]
+[clone : clone] + CHECKOUT_DIR=/workspace/output/
+[clone : clone] + '[' true '=' true ]
+[clone : clone] + cleandir
+[clone : clone] + '[' -d /workspace/output/ ]
+[clone : clone] + rm -rf /workspace/output//Dockerfile /workspace/output//LICENSE /workspace/output//Makefile /workspace/output//Procfile /workspace/output//README.md /workspace/output//bin /workspace/output//deploy /workspace/output//postgresql-ephemeral-template.json /workspace/output//requirements.txt /workspace/output//service /workspace/output//setup.cfg /workspace/output//tekton /workspace/output//test.txt /workspace/output//tests
+[clone : clone] + rm -rf /workspace/output//.devcontainer /workspace/output//.flaskenv /workspace/output//.git /workspace/output//.gitattributes /workspace/output//.github /workspace/output//.gitignore
+[clone : clone] + rm -rf '/workspace/output//..?*'
+[clone : clone] + test -z 
+[clone : clone] + test -z 
+[clone : clone] + test -z 
+[clone : clone] + git config --global --add safe.directory /workspace/output
+[clone : clone] + /ko-app/git-init '-url=https://github.com/adityamatale/devops-capstone-project.git' '-revision=cd-pipeline' '-refspec=' '-path=/workspace/output/' '-sslVerify=true' '-submodules=true' '-depth=1' '-sparseCheckoutDirectories='
+[clone : clone] {"level":"info","ts":1731436790.255409,"caller":"git/git.go:176","msg":"Successfully cloned https://github.com/adityamatale/devops-capstone-project.git @ ec4bae659c1cc03e2f9dde7ccf803cf077b19d35 (grafted, HEAD, origin/cd-pipeline) in path /workspace/output/"}
+[clone : clone] {"level":"info","ts":1731436790.3082776,"caller":"git/git.go:215","msg":"Successfully initialized and updated submodules in path /workspace/output/"}
+[clone : clone] + cd /workspace/output/
+[clone : clone] + git rev-parse HEAD
+[clone : clone] + RESULT_SHA=ec4bae659c1cc03e2f9dde7ccf803cf077b19d35
+[clone : clone] + EXIT_CODE=0
+[clone : clone] + '[' 0 '!=' 0 ]
+[clone : clone] + git log -1 '--pretty=%ct'
+[clone : clone] + RESULT_COMMITTER_DATE=1731436635
+[clone : clone] + printf '%s' 1731436635
+[clone : clone] + printf '%s' ec4bae659c1cc03e2f9dde7ccf803cf077b19d35
+[clone : clone] + printf '%s' https://github.com/adityamatale/devops-capstone-project.git
+
+[init : remove] Removing all files from /workspace/source ...
+
+[lint : flake8] /tekton/scripts/script-0-fjhs9: 8: flake8: not found
+
+[tests : nosetests] ***** Installing dependencies *****
+[tests : nosetests] Requirement already satisfied: pip in /usr/local/lib/python3.9/site-packages (23.0.1)
+[tests : nosetests] Collecting pip
+[tests : nosetests]   Downloading pip-24.3.1-py3-none-any.whl (1.8 MB)
+[tests : nosetests]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 21.6 MB/s eta 0:00:00
+[tests : nosetests] Requirement already satisfied: wheel in /usr/local/lib/python3.9/site-packages (0.44.0)
+[tests : nosetests] Collecting wheel
+[tests : nosetests]   Downloading wheel-0.45.0-py3-none-any.whl (72 kB)
+[tests : nosetests]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 72.5/72.5 kB 38.7 MB/s eta 0:00:00
+[tests : nosetests] Installing collected packages: wheel, pip
+[tests : nosetests]   Attempting uninstall: wheel
+[tests : nosetests]     Found existing installation: wheel 0.44.0
+[tests : nosetests]     Uninstalling wheel-0.44.0:
+[tests : nosetests]       Successfully uninstalled wheel-0.44.0
+[tests : nosetests]   Attempting uninstall: pip
+[tests : nosetests]     Found existing installation: pip 23.0.1
+[tests : nosetests]     Uninstalling pip-23.0.1:
+[tests : nosetests]       Successfully uninstalled pip-23.0.1
+[tests : nosetests] Successfully installed pip-24.3.1 wheel-0.45.0
+[tests : nosetests] WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+[tests : nosetests] ERROR: Could not open requirements file: [Errno 2] No such file or directory: 'requirements.txt'
+
